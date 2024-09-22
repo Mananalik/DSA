@@ -6,7 +6,7 @@ public class FindDuplicate {
         int [] arr = {4,3,2,7,8,2,3,1};
         //{1,2,3,4,2}
         cycleSort(arr);
-    }
+            }
     static void cycleSort(int []arr){
         int i=0;
         while(i<arr.length){

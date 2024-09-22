@@ -11,6 +11,8 @@ public class SquaresOfSortedArrayEasy {
             arr[i] = nums[i]*nums[i];
         }
         Arrays.sort(arr);
+        List<Integer> list;
+        list = new ArrayList<>();
         return arr;
     }
 }

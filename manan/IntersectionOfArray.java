@@ -4,9 +4,9 @@ import java.util.*;
 
 public class IntersectionOfArray {
     public static void main(String[] args) {
-        int [] nums1 = {4,9,5};
+        int [] nums1 = {1,2,2,1};
         Arrays.sort(nums1);
-        int [] nums2 = {9,4,9,8,4};
+        int [] nums2 = {2};
         Arrays.sort(nums2);
         System.out.println(Arrays.toString(inter(nums1,nums2)));
     }
@@ -23,15 +23,9 @@ public class IntersectionOfArray {
                j++;
            }
            else{
-               if(list.contains(nums1[i])){
-                   i++;
-                   j++;
-               }
-               else {
-                   list.add(nums1[i]);
-                   i++;
-                   j++;
-               }
+               list.add(nums1[i]);
+               i++;
+               j++;
            }
        }
        int n = list.size();
@@ -42,3 +36,21 @@ public class IntersectionOfArray {
        return arr;
     }
 }
+//    int n1  = nums1.length;
+//    int n2  = nums2.length;
+//    ArrayList<Integer> list1 = new ArrayList<>();
+//    ArrayList<Integer> list2 = new ArrayList<>();
+//        for(int i=0;i<n2;i++){
+//        list1.add(nums2[i]);
+//        }
+//        for(int i:nums1){
+//        if(list1.contains(i)){
+//        list2.add(i);
+//        }
+//
+//        }
+//        int[] ans = new int[list2.size()];
+//        for(int i = 0 ; i<list2.size();i++){
+//        ans[i]=list2.get(i);
+//        }
+//        return ans;

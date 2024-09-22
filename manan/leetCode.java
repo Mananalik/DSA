@@ -6,10 +6,14 @@ import java.lang.*;
 import java.lang.String;
 public class leetCode {
     public static void main(String args[]) {
-        int[] candidates = {2, 3, 6, 7};
-        int target = 7;
-        Arrays.sort(candidates);
-        List<List<Integer>> result = new ArrayList<List<Integer>>();
+        int a = 2;
+        int b = 2;
+        int max = Math.max(a,b);
+        System.out.println(max);
+//        int[] candidates = {2, 3, 6, 7};
+//        int target = 7;
+//        Arrays.sort(candidates);
+//        List<List<Integer>> result = new ArrayList<List<Integer>>();
 //        combinationalSum(result , new ArrayList<Integer>(),candidates,target,0);
 //        System.out.println(isPower(3,0));
 //        Scanner sc = new Scanner(System.in);
@@ -111,23 +115,23 @@ public class leetCode {
 //             result.add(new ArrayList<Integer> (arr));
 //        }
 //    }
-    static boolean exist(char [][] board ,String up, String word , int r , int c,int i){
-     if(r==1 && c==1) {
-         if(up.equals(word)) {
-             return true;
-         }
-     }
-     if(r>1) {
-         if(board[r][c]==word.charAt(i)) {
-             exist(board,up+word.charAt(i),word,r-1,c,i+1);
-         }
-         else {
-
-         }
-     }
-     return false;
-    }
-}
+//    static boolean exist(char [][] board ,String up, String word , int r , int c,int i){
+//     if(r==1 && c==1) {
+//         if(up.equals(word)) {
+//             return true;
+//         }
+//     }
+//     if(r>1) {
+//         if(board[r][c]==word.charAt(i)) {
+//             exist(board,up+word.charAt(i),word,r-1,c,i+1);
+//         }
+//         else {
+//
+//         }
+//     }
+//     return false;
+//    }
+//}
 
 //    static int[] mergeSort(int[] nums1, int m, int[] nums2, int n) {
 //        int[] mix = new int[m + n];
@@ -171,7 +175,7 @@ public class leetCode {
 //            }
 //        }
 //        return mix;
-//    }
+   }
 
 
 
