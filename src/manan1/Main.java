@@ -1,6 +1,56 @@
 package manan1;
 import java.util.Stack;
 public class Main {
+    public static void main(String[] args) {
+//        Stack<Integer> stack = new Stack<>();
+//        stack.push(5);
+//        System.out.println(stack.pop());
+        String s = "()";
+        System.out.println(minAddToMakeValid(s));
+
+    }
+
+//    static boolean isValid(String s) {
+//        Stack<Character> stack = new Stack<>();
+//
+//        for(char ch: s.toCharArray()){
+//            if(ch=='(' || ch=='{' || ch=='[' ){
+//                stack.push(ch);
+//            }else{
+//                if(ch==')'){
+//                    if(stack.isEmpty() || stack.pop()!='('){
+//                        return false;
+//                    }
+//                }
+//                if(ch=='}'){
+//                    if(stack.isEmpty() || stack.pop()!='{'){
+//                        return false;
+//                    }
+//                }
+//                if(ch==']'){
+//                    if(stack.isEmpty() || stack.pop()!='['){
+//                        return false;
+//                    }
+//                }
+//            }
+//        }
+//        return stack.isEmpty();
+//    }
+static int minAddToMakeValid(String s) {
+    Stack<Character> stack = new Stack<>();
+    for(char ch: s.toCharArray()){
+        if(ch==')'){
+            if(!stack.isEmpty() && stack.peek()==')'){
+                stack.pop();
+            }else{
+                stack.push(ch);
+            }
+        }else{
+            stack.push(ch);
+        }
+    }
+    return stack.size();
+}
     //       LL list = new LL();
 //       list.insertFirst(3);
 //        list.insertFirst(2);
@@ -26,44 +76,39 @@ public class Main {
 //        int z=0;
 //        int arr[] = {x,y,z};
 //        System.out.println(Arrays.toString(arr));
-    public static void main(String[] args) {
-        Stack<Integer> stack = new Stack<>();
-        stack.push(5);
-        System.out.println(stack.pop());
 
-    }
 }
-class QueueUsingStack{
-    private Stack<Integer> first;
-    private Stack<Integer> second;
-    public QueueUsingStack(){
-        first = new Stack<>();
-        second = new Stack<>();
-    }
-    public void add(int item){
-        first.push(item);
-    }
-    public int remove() throws Exception {
-        while (!first.isEmpty()) {
-            second.push(first.pop());
-        }
-        int removed = second.pop();
-        while (!second.isEmpty()) {
-            first.push(second.pop());
-        }
-        return removed;
-    }
-    public int peak() throws Exception {
-        while (!first.isEmpty()) {
-            second.push(first.pop());
-        }
-        int peeked = second.peek();
-        while (!second.isEmpty()) {
-            first.push(second.pop());
-        }
-        return peeked;
-    }
-        public boolean isEmpty(){
-            return first.isEmpty();
-        }
-    }
+//class QueueUsingStack{
+//    private Stack<Integer> first;
+//    private Stack<Integer> second;
+//    public QueueUsingStack(){
+//        first = new Stack<>();
+//        second = new Stack<>();
+//    }
+//    public void add(int item){
+//        first.push(item);
+//    }
+//    public int remove() throws Exception {
+//        while (!first.isEmpty()) {
+//            second.push(first.pop());
+//        }
+//        int removed = second.pop();
+//        while (!second.isEmpty()) {
+//            first.push(second.pop());
+//        }
+//        return removed;
+//    }
+//    public int peak() throws Exception {
+//        while (!first.isEmpty()) {
+//            second.push(first.pop());
+//        }
+//        int peeked = second.peek();
+//        while (!second.isEmpty()) {
+//            first.push(second.pop());
+//        }
+//        return peeked;
+//    }
+//        public boolean isEmpty(){
+//            return first.isEmpty();
+//        }
+//    }
