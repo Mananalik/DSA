@@ -5,8 +5,9 @@ public class Main {
 //        Stack<Integer> stack = new Stack<>();
 //        stack.push(5);
 //        System.out.println(stack.pop());
-        String s = "()";
-        System.out.println(minAddToMakeValid(s));
+//        String s = "()";
+//        System.out.println(minAddToMakeValid(s));
+        Heap<Integer> heap = new Heap<>();
 
     }
 
@@ -36,21 +37,21 @@ public class Main {
 //        }
 //        return stack.isEmpty();
 //    }
-static int minAddToMakeValid(String s) {
-    Stack<Character> stack = new Stack<>();
-    for(char ch: s.toCharArray()){
-        if(ch==')'){
-            if(!stack.isEmpty() && stack.peek()==')'){
-                stack.pop();
-            }else{
-                stack.push(ch);
-            }
-        }else{
-            stack.push(ch);
-        }
-    }
-    return stack.size();
-}
+//static int minAddToMakeValid(String s) {
+//    Stack<Character> stack = new Stack<>();
+//    for(char ch: s.toCharArray()){
+//        if(ch==')'){
+//            if(!stack.isEmpty() && stack.peek()==')'){
+//                stack.pop();
+//            }else{
+//                stack.push(ch);
+//            }
+//        }else{
+//            stack.push(ch);
+//        }
+//    }
+//    return stack.size();
+//}
     //       LL list = new LL();
 //       list.insertFirst(3);
 //        list.insertFirst(2);
