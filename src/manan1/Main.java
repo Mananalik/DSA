@@ -1,14 +1,21 @@
 package manan1;
+import java.util.ArrayList;
 import java.util.Stack;
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception{
 //        Stack<Integer> stack = new Stack<>();
 //        stack.push(5);
 //        System.out.println(stack.pop());
 //        String s = "()";
 //        System.out.println(minAddToMakeValid(s));
         Heap<Integer> heap = new Heap<>();
-
+        heap.insert(34);
+        heap.insert(45);
+        heap.insert(22);
+        heap.insert(89);
+        heap.insert(76);
+        ArrayList List = heap.heapSort();
+        System.out.println(List);
     }
 
 //    static boolean isValid(String s) {

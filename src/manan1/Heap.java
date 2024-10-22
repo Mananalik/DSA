@@ -63,5 +63,12 @@ private int parent(int index){
         downheap(min);
     }
   }
+  public ArrayList<T> heapSort() throws Exception{
+    ArrayList<T> data = new ArrayList<>();
+    while(!list.isEmpty()){
+        data.add(this.remove());
 
+    }
+    return data;
+    }
 }
