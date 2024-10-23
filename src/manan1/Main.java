@@ -8,14 +8,16 @@ public class Main {
 //        System.out.println(stack.pop());
 //        String s = "()";
 //        System.out.println(minAddToMakeValid(s));
-        Heap<Integer> heap = new Heap<>();
-        heap.insert(34);
-        heap.insert(45);
-        heap.insert(22);
-        heap.insert(89);
-        heap.insert(76);
-        ArrayList List = heap.heapSort();
-        System.out.println(List);
+//        Heap<Integer> heap = new Heap<>();
+//        heap.insert(34);
+//        heap.insert(45);
+//        heap.insert(22);
+//        heap.insert(89);
+//        heap.insert(76);
+//        ArrayList List = heap.heapSort();
+//        System.out.println(List);
+          Karp_Rabin algo = new Karp_Rabin();
+          algo.search("ApporvKunalRahul","Kunal");
     }
 
 //    static boolean isValid(String s) {
